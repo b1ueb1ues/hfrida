@@ -14,6 +14,7 @@ f.engine = 'v8'
 f.spawn = False
 f.jnclude = ['bin.js']
 f.run(js)
+f.wait()
 
 
 

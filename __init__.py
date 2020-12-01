@@ -12,7 +12,6 @@ def on_message(message, data):
     else:
         print('[+]'+str(message))
 
-
 class hfrida() :
     def __init__(this):
         this.script = None
@@ -22,7 +21,6 @@ class hfrida() :
         this.spawn = 0
         this.engine = 'v8'
         this.on_message = on_message
-
 
     def run(this, js_name):
         header = 'var __libname__ = "' + this.lib_name + '"\n'
@@ -62,5 +60,7 @@ class hfrida() :
         this.script.load()
         if this.spawn:
             device.resume(pid)
+
+    def wait(this):
         sys.stdin.read()
 

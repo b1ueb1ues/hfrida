@@ -38,8 +38,8 @@ function _module(libname) {
     else
         this.lib_name = libname;
     this.lib_base = Module.findBaseAddress(this.lib_name);
-    send('process_id: '+Process.id);
-    send('lib_base: '+this.lib_base);
+    console.error('[+] process_id: '+Process.id);
+    console.error('[+] lib_base: '+this.lib_base);
     this.hook = function(address, hook) {
         Interceptor.attach(this.lib_base.add(address), hook);
     }
