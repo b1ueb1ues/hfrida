@@ -31,7 +31,7 @@ class hfrida() :
             jnclude += '\n'
 
         if not js_name:
-            jscode = header + jnclude + js_body
+            jscode = header + jnclude + this.js_body
             header_len = 0
         else:
             lines = 0
